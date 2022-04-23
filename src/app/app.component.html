@@ -1,0 +1,28 @@
+<div class="toolbar" role="banner">
+  
+  <span>Wheels</span>
+    
+</div>
+
+<div role="main">
+
+  <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when scrambled it to make a type specimen book.</p><br>
+
+  <div>
+    <a id="prev" (click)="show_slide(-1)">&#10094;</a>
+    <a id="next" (click)="show_slide(1)">&#10095;</a>
+  <div class="wheels  flex-container">
+    <ng-container *ngFor="let name of filter; index as i;">
+        <div tabindex="0" (click)="zoomit($event)" class="flex-item">
+          <img [src]="name.asset" />
+          <div>
+            <b>{{name.text1}}</b>
+            <p>{{name.text2}}</p>
+            <b>{{name.text3}}</b>
+          </div>
+        </div>
+    </ng-container>
+  </div>
+  </div>
+</div>
+<img id="clouds" src="../assets/bg-cover.png" alt="Background Cover">
